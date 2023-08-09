@@ -1,0 +1,39 @@
+[
+    {
+        "title": "Spartan Tutors",
+        "text": [
+            "This is my biggest project yet.",
+            "Built using Swift, this app connects tutors and students through a simple UI."
+        ],
+        "src": "../resources/assets/logoSpartanTutors.png",
+        "color": "spartan",
+        "redirectGitHub":"https://github.com/LeoSSpecht/SpartanTutors-Public",
+        "redirectGo":"https://apps.apple.com/us/app/spartan-tutors/id1635066798"
+    },
+    {
+        "title": "SpartaHack Website",
+        "text": [
+            "Together with 2 friends we built the website for SpartaHack 8.",
+            "Supports features like registering, exporting data and cheking users in."
+        ],
+        "src": "../resources/assets/logoSpartaHack.png",
+        "redirectGitHub": "https://github.com/SpartaHack/SpartaHack8-2023",
+        "redirectGo":"https://www.spartahack.com"
+    },
+    {
+        "title": "Web Scraping With Python",
+        "text": [
+            "A small script that logs in and extract data from other Junior companies so I could contact them."
+        ],
+        "src": "../resources/assets/logoAutomation.png",
+        "redirectGitHub": "https://github.com/LeoSSpecht/sales-python-webscraping"
+    },
+    {
+        "title": "Automating Data Extraction",
+        "text": [
+            "This customizable script connects Google Sheets and Pipefy's API to extract data daily, making it simpler to generate metrics."
+        ],
+        "src": "../resources/assets/logoAutomation.png",
+        "redirectGitHub": "https://github.com/LeoSSpecht/pipefy-api-extraction"
+    }
+]

@@ -12,6 +12,10 @@ body {
   word-break: break-word;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -40,5 +44,11 @@ code {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-items: center;
+  }
+
+  .flex-auto-columns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

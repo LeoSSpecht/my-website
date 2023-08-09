@@ -54,7 +54,7 @@
     background: #dbdbdb;
     border: 1px solid #dbdbdb;
     border-radius: 100%;
-    display: block;
+    display: flex;
     overflow:hidden
 }
 
@@ -111,7 +111,6 @@
 .timeline-item .item-header {
     text-transform: uppercase;
     display: block;
-    font-size: 11px;
     letter-spacing: 1px;
     margin-bottom: 3px;
 }
@@ -119,23 +118,20 @@
 .timeline-item .item-title {
     color: #363636;
     font-weight: 600;
-    font-size: 1.25rem;
     line-height: 1.125;
-    margin-bottom: 4px;
+    margin-bottom: 0.7rem;
 }
 
 .timeline-item .item-subtitle {
-    font-size: 0.75rem;
-    color: #4a4a4a;
+    color: #434343;
     font-weight: 400;
-    line-height: 1.25;
+    line-height: 1.5;
     margin-bottom: 10px;
 }
 
 .timeline-item .item-content  {
     margin-top: 0;
     margin-bottom: 0.5rem;
-    font-size: 14px;
     line-height: 24px;
     max-width: 410px;
 }

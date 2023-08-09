@@ -4,15 +4,16 @@ import {Footer} from "../../components/footer";
 import {AboutMe} from "../../components/aboutMe";
 import {Experiences} from "../../components/experiences/experiences";
 import {Skills} from "../../components/skills";
-
+import Projects from "../../components/projects/projects";
 
 export const MainPage = () => {
     return (
         <div className="App">
             <Header/>
-            <AboutMe/>
-            <Experiences/>
-            <Skills/>
+            <AboutMe id="aboutMe" />
+            <Experiences id="experiences"/>
+            <Skills id="skills"/>
+            <Projects id="projects"/>
             <Footer/>
         </div>
     );

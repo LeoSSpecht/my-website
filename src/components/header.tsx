@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { headerBackgroundImage } from '../utils/imageGetter';
 import '../index.css'
-const backgroundImage = "../";
 
 const Header = () => {
 
@@ -22,6 +21,7 @@ const Header = () => {
     const itemStyle = {
             display: "block",
             width: "100%",
+            fontSize: '18px'
     }
     
     const liStyle = {
@@ -37,18 +37,21 @@ const Header = () => {
         return(
             <nav  style={navStyle}>
                 <div className=''>
-                    <a className="font-extrabold">Leonardo Specht</a>
+                    <a href="/" className="font-extrabold text-xl">Leonardo Specht</a>
                 </div>
                 <div  className='m-0 hidden not-phone:block ml-auto'>
                     <ul style={ulStyle} className="">
                     <li style={liStyle}>
-                        <a style={itemStyle} href="/">About Me</a>
+                        <a style={itemStyle} href="#aboutMe">About Me</a>
                     </li>
                     <li style={liStyle} >
-                    <a style={itemStyle} href="/">My Work</a>
+                    <a style={itemStyle} href="#experiences">My Work</a>
                     </li>
                     <li style={liStyle}>
-                        <a style={itemStyle} href="/">Skills</a>
+                        <a style={itemStyle} href="#skills">Skills</a>
+                    </li>
+                    <li style={liStyle}>
+                        <a style={itemStyle} href="#projects">Projects</a>
                     </li>
                     </ul>
 
@@ -61,12 +64,11 @@ const Header = () => {
 
     return (
         <header className="App-header">
-
                 <section className="min-h-[100vh]" style={backimagestyle}>
                     {navbar()}
                     <div>
-                    <div style={{zIndex:1, position:'absolute', top:'15%'}} className="">
-                        <p className="text-3xl font-bold text-white items-center mx-10">Hey there!<br/>I'm Leo, nice to meet you</p>
+                    <div style={{zIndex:1, position:'absolute', top:'40%'}} className="">
+                        <p className="text-5xl leading-normal font-extrabold text-white items-center mx-10">Hey there!<br/>I'm Leo.</p>
                     </div>
                     </div>
 

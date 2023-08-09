@@ -6,6 +6,7 @@ export default interface ItemData {
     itemTitle: string;
     itemSubtitle: string;
     itemContent: Array<string>;
+    redirectLink?: string;
 }
 
 

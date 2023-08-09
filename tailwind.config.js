@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       colors:{
         'logo-background':'#48c78e',
-        'icon':"rgb(224, 224, 224)"
+        'icon':"rgb(224, 224, 224)",
+        'spartan-tutors':'rgb(25,69,59)'
       }
     },
     screens: {

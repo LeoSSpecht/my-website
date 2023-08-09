@@ -1,25 +1,29 @@
 [
     {
-        "imagePath": "../resources/assets/me.png",
+        "imagePath": "../resources/assets/logoAlexa.png",
         "itemHeader": "Summer 2023",
         "itemTitle": "Amazon.com - Alexa",
         "itemSubtitle": "Software Development Engineer Intern",
         "itemContent": [
-            "Making people's life easier through your personal assitant!"
-        ]
+            "Making people's life easier through your personal AI assistant!",
+            "Integrated front and back-end to create a new feature for Alexa customers, using Java and React Native.",
+            "Collaborated across different teams, working in different packages to deliver high quality code."
+        ],
+        "redirectLink": "https://alexa.amazon.com" 
     },
     {
-        "imagePath": "../resources/assets/me.png",
+        "imagePath": "../resources/assets/logoSpartanTutors.png",
         "itemHeader": "Fall 2021 - Present",
         "itemTitle": "Spartan Tutors",
         "itemSubtitle": "Founder and Developer",
         "itemContent": [
             "Founded 2 years ago, Spartan Tutor is a venture ran by me and a partner during school semester.",
-            "Through an app, built by me, we connect tutors with students who need help in Computer Science classes! Together with our tutors we have held more than 1000 sessions and helped more than 200 people"
-        ]
+            "Through an app, built by me, we connect tutors with students who need help in Computer Science classes! Together with our tutors we have held more than 1000 sessions and helped more than 200 people."
+        ],
+        "redirectLink":"https://apps.apple.com/us/app/spartan-tutors/id1635066798"
     },
     {
-        "imagePath": "../resources/assets/me.png",
+        "imagePath": "../resources/assets/logoMSU.png",
         "itemHeader": "Spring 2022 - Spring 203",
         "itemTitle": "Intro to Programming I and II",
         "itemSubtitle": "Teaching Assistant",
@@ -29,14 +33,27 @@
         ]
     },
     {
-        "imagePath": "../resources/assets/me.png",
+        "imagePath": "../resources/assets/logoStone.png",
         "itemHeader": "Summer 2022",
         "itemTitle": "Stone Co",
         "itemSubtitle": "Risk Data Analyst Intern",
         "itemContent": [
             "Analyzed fraud and user data using Python and Data Studio to identify money laundering patterns, client behavior and validate banking product viability and improvement possibilities.",
             "Developed an automation project using Python to extract bureau API data, combined with database SQL queries in order to generate user's risk analysis; leading to a 88% productivity increase, saving 210h/month."
-        ]
+        ],
+        "redirectLink":"https://investors.stone.co"
+    },
+    {
+        "imagePath": "../resources/assets/logoCoemJr.jpeg",
+        "itemHeader": "April 2020 - June 2021",
+        "itemTitle": "Coem Jr",
+        "itemSubtitle": "Data Analyst",
+        "itemContent": [
+            "Created a complete data structure to analyze the company's data. Presented the results for the entire team and explained the importance of using data insights to make decisions.",
+            "Used Python, Java Script, APIs, and Power BI to automate and share visual dashboards, incrementing an automated data-driven culture in the company."
+        ],
+        "redirectLink":"https://coemjr.com.br"
     }
+
 
 ]
