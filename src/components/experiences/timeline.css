@@ -81,6 +81,14 @@
     padding: 0em 0em 1em 2em;
 }
 
+.timeline.is-centered .timeline-item:nth-of-type(2n+1) .timeline-content {
+    padding: 1em 2em 0 0;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-basis:100%
+}
 
 .timeline.is-centered .timeline-item:nth-of-type(2n+1) {
     align-self: flex-start;
@@ -97,15 +105,6 @@
 .timeline.is-centered .timeline-item:nth-of-type(2n+1) .timeline-marker {
     -webkit-transform: translateX(50%);
     transform:translateX(50%)
-}
-
-.timeline.is-centered .timeline-item:nth-of-type(2n+1) .timeline-content {
-    padding: 1em 2em 0 0;
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    flex-basis:100%
 }
 
 .timeline-item .item-header {

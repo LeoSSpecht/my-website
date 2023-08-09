@@ -51,7 +51,7 @@ const TimelineItem = ({
 
             <div className="timeline-content">
                 <p className="item-header text-sm">{itemData!.itemHeader}</p>
-                <h1 className="item-title text-2xl">{itemData!.itemTitle}</h1>
+                <h1 className="item-title text-xl">{itemData!.itemTitle}</h1>
                 <p className="item-subtitle text-sm">{itemData!.itemSubtitle}</p>
                 <div>
                     {itemData!.itemContent!.map(content => {
@@ -66,7 +66,7 @@ const TimelineItem = ({
 
 export const Experiences = ({id}:{id:string}): JSX.Element => {
     return (
-        <div id={id} className="timeline is-centered mx-12">
+        <div id={id} className="timeline is-centered mx-6 not-phone:mx-12">
             <TimelineItem isHeader={true}/>
             <TimelineItem isFirst={true}/>
             {
