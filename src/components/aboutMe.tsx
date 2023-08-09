@@ -22,7 +22,7 @@ export const AboutMe = ({id}:{id:string}): JSX.Element => {
         return(
             <a href={redirect} target="_blank" rel="noreferrer">
                 <div className="flex my-2 not-phone:mx-3">
-                    <span style={tagStyle} className="flex-center text-base bg-slate-700 px-5 rounded-s w-26">{text}</span>
+                    <span style={tagStyle} className="flex-center text-base bg-slate-700 px-5 rounded-s w-28">{text}</span>
                     <span style={tagStyle} className="flex-center bg-logo-background px-2 rounded-e">
                         <Icon color="rgb(224, 224, 224)" size={iconSize}/>
                     </span>
