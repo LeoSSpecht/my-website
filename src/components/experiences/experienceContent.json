@@ -2,12 +2,12 @@
     {
         "imagePath": "../resources/assets/logoAlexa.png",
         "itemHeader": "Summer 2023",
-        "itemTitle": "Amazon.com - Alexa",
+        "itemTitle": "Amazon - Alexa Devices",
         "itemSubtitle": "Software Development Engineer Intern",
         "itemContent": [
             "Making people's life easier through your personal AI assistant!",
-            "Integrated front and back-end to create a new feature for Alexa customers, using Java and React Native.",
-            "Collaborated across different teams, working in different packages to deliver high quality code."
+            "Developed and implement a new feature utilizing Java for the back-end and React Native for the front-end, enabling end customers to experiment various functionalities within Alexa.",
+            "Effectively communicated and collaborated across 4 different teams, working in different code bases in order to deliver high quality code, including documentation, unit testing and end-to-end manual testing."
         ],
         "redirectLink": "https://alexa.amazon.com" 
     },
