@@ -3,7 +3,7 @@
         "title": "Spartan Tutors",
         "text": [
             "This is my biggest project yet.",
-            "Built using Swift, this app connects tutors and students through a simple UI."
+            "Built using Swift, the app connects tutors and students through a simple UI."
         ],
         "src": "../resources/assets/logoSpartanTutors.png",
         "color": "spartan",

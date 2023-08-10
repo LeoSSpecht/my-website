@@ -27,7 +27,7 @@ const ProjectTyle = ({
   }
 
   return (
-      <div className="mx-4 my-3 w-52">
+      <div className="shadow-center transition hover:scale-105 hover:shadow-blue-500/40 rounded-lg mx-4 my-3 w-52">
         <div className={`w-full h-24 p-1 rounded-t-lg flex-center ${colorMap[color]}`}>
           <img 
             alt="projectImage" 
