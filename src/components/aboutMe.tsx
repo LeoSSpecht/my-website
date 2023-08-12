@@ -59,7 +59,7 @@ export const AboutMe = ({id}:{id:string}): JSX.Element => {
             </div>
             <div className="pt-10 grid-2-colums not-phone:flex-center">
                 {logo("Github", BsGithub, "https://github.com/LeoSSpecht")}
-                {logo("Resume", BiSolidFilePdf, "https://drive.google.com/file/d/1RGV3Y5isIVUjslKYpliPNSXP0kew6smx/view?usp=sharing", 18)}
+                {logo("Resume", BiSolidFilePdf, "https://drive.google.com/file/d/1SeZbQ4J2o_YVWPAm1Vx-ouTGMjxgH-0K/view?usp=share_link", 18)}
                 {logo("LinkedIn", BsLinkedin, "https://www.linkedin.com/in/leospecht/")}
                 {logo("Email", MdEmail, "mailto: leo.s.specht@gmail.com")}
             </div>
