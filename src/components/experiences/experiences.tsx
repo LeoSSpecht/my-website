@@ -31,7 +31,7 @@ const TimelineItem = ({
           Experiences
         </h1>
         <div className="timeline is-centered">
-          <div className="timeline-header">2023</div>
+          <div className="timeline-header">2024</div>
         </div>
       </div>
     );

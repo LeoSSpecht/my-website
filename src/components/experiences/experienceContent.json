@@ -1,5 +1,13 @@
 [
   {
+    "imagePath": "../resources/assets/logoMeta.jpeg",
+    "itemHeader": "Summer 2024",
+    "itemTitle": "Meta",
+    "itemSubtitle": "Software Development Engineer Intern",
+    "itemContent": ["Excited for what is to come..."],
+    "redirectLink": "https://www.meta.com"
+  },
+  {
     "imagePath": "../resources/assets/logoAlexa.png",
     "itemHeader": "Summer 2023",
     "itemTitle": "Amazon - Alexa Devices",
