@@ -20,20 +20,21 @@
     "redirectLink": "https://alexa.amazon.com"
   },
   {
+    "itemHeader": "Fall 2022 - Present",
     "imagePath": "../resources/assets/logoSpartanTutors.png",
-    "itemHeader": "Fall 2021 - Present",
     "itemTitle": "Spartan Tutors",
     "itemSubtitle": "Founder and Developer",
     "itemContent": [
       "Founded 2 years ago, Spartan Tutors is a venture ran by me and a partner during school semester.",
-      "Through an app, built by me, we connect tutors with students who need help in Computer Science classes! Together with our tutors we have held more than 1000 sessions and helped more than 200 people."
+      "Through an app, built by me, we connect tutors with students who need help in Computer Science classes! Together with our tutors we have held more than 1000 sessions and helped more than 200 people.",
+      "Awarded the Burgess New Venture Challenge prize of $5,000 dollars, winning in 4th place of the best startups in 2024!"
     ],
     "redirectLink": "https://apps.apple.com/us/app/spartan-tutors/id1635066798"
   },
   {
     "imagePath": "../resources/assets/logoMSU.png",
-    "itemHeader": "Spring 2022 - Spring 203",
-    "itemTitle": "Intro to Programming I and II",
+    "itemHeader": "Spring 2022 - Present",
+    "itemTitle": "DSA and Intro to Programming",
     "itemSubtitle": "Teaching Assistant",
     "itemContent": [
       "Teaching and programming are two things that I am passionate about, with this job I get to do both.",
