@@ -79,7 +79,7 @@ export const AboutMe = ({ id }: { id: string }): JSX.Element => {
         {logo(
           "Resume",
           BiSolidFilePdf,
-          "https://drive.google.com/file/d/1SeZbQ4J2o_YVWPAm1Vx-ouTGMjxgH-0K/view?usp=share_link",
+          "https://drive.google.com/file/d/1Gs8Q46nZuxzvsmMEVpnHs_9O1v9_cikY/view?usp=sharing",
           18
         )}
         {logo("LinkedIn", BsLinkedin, "https://www.linkedin.com/in/leospecht/")}
