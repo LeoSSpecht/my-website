@@ -10,6 +10,14 @@
     "redirectGo": "https://apps.apple.com/us/app/spartan-tutors/id1635066798"
   },
   {
+    "title": "Telegram Bot",
+    "text": [
+      "A telegram bot that scans for messages and automatically buys meme coins, mimicking meme coins whale movements."
+    ],
+    "src": "../resources/assets/dogecoin.png",
+    "redirectGitHub": "https://github.com/LeoSSpecht/telegram-bot"
+  },
+  {
     "title": "Spartan Tutors",
     "text": [
       "This is my biggest project yet.",
