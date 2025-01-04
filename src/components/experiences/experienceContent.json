@@ -1,10 +1,18 @@
 [
   {
+    "imagePath": "../resources/assets/logoStone.png",
+    "itemHeader": "Fall 2024 - Spring 2025",
+    "itemTitle": "Stone Co",
+    "itemSubtitle": "Software Development Engineer Intern",
+    "itemContent": ["Creating a better Developer Experience through platformization and a strong Foudation."],
+    "redirectLink": "https://investors.stone.co"
+  },
+  {
     "imagePath": "../resources/assets/logoMeta.jpeg",
     "itemHeader": "Summer 2024",
     "itemTitle": "Meta",
     "itemSubtitle": "Software Development Engineer Intern",
-    "itemContent": ["Excited for what is to come..."],
+    "itemContent": ["Building new experiences in the Metaverse."],
     "redirectLink": "https://www.meta.com"
   },
   {
@@ -20,7 +28,7 @@
     "redirectLink": "https://alexa.amazon.com"
   },
   {
-    "itemHeader": "Fall 2022 - Present",
+    "itemHeader": "Fall 2022 - Spring 2024",
     "imagePath": "../resources/assets/logoSpartanTutors.png",
     "itemTitle": "Spartan Tutors",
     "itemSubtitle": "Founder and Developer",
@@ -33,7 +41,7 @@
   },
   {
     "imagePath": "../resources/assets/logoMSU.png",
-    "itemHeader": "Spring 2022 - Present",
+    "itemHeader": "Spring 2022 - Spring 2025",
     "itemTitle": "DSA and Intro to Programming",
     "itemSubtitle": "Teaching Assistant",
     "itemContent": [
