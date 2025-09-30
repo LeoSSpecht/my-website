@@ -80,6 +80,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
           return (
             <SplideSlide className="flex-center">
               <img
+                alt="sushi"
                 src={`${process.env.PUBLIC_URL + img_path}`}
                 style={{
                   width: "220px",

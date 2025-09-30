@@ -29,7 +29,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ folder, imageCount }) => {
     Promise.all(
       possible.map((url) => fetch(url).then((res) => (res.ok ? url : null)))
     ).then((urls) => setImages(urls.filter((u): u is string => !!u)));
-  }, [folder]);
+  }, [folder, imageCount]);
 
   return (
     <article style={{ marginBottom: "3rem" }} className="post-content">

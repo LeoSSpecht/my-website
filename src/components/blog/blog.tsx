@@ -5,8 +5,6 @@ import BlogPost from "../../components/blog/blogPost";
 import "../../blog.css";
 import PostContent from "./postContent";
 
-const postFolders = ["08182025_urara"];
-
 const Blog: React.FC = () => {
   return (
     <div
