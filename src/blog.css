@@ -1,0 +1,56 @@
+
+h1 {
+  font-size: 2.5em;
+}
+
+h1, h2, h3, h4 {
+  color: #222;
+}
+a:link,
+a:visited { 
+  color: #222; 
+  border-bottom: 1px solid #ccc; 
+  text-decoration: none;
+  transition: border-color 0.3s;
+}
+
+a:link { border-bottom: 1px solid #ea4e4e; }
+
+a:hover { border-color: #ccc }
+
+/* @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;600&display=swap');
+
+
+.blog-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Inter', sans-serif;
+  color: #222;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  font-family: 'EB Garamond', serif;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.blog-post h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+.blog-post p, .blog-post li {
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.blog-post blockquote {
+  font-style: italic;
+  border-left: 4px solid #ccc;
+  margin: 1rem 0;
+  padding-left: 1rem;
+} */
