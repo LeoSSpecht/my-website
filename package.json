@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@types/jest": "^29.5.3",
     "@types/node": "^20.4.5",
     "@types/react": "^18.2.18",

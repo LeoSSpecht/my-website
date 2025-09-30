@@ -1,26 +1,95 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  Splide,
+  SplideSlide,
+  Splide as SplideType,
+} from "@splidejs/react-splide";
+// Default theme
+import "@splidejs/react-splide/css";
+// // or other themes
+// import "@splidejs/react-splide/css/skyblue";
+// import "@splidejs/react-splide/css/sea-green";
+
+// // or only core styles
+// import "@splidejs/react-splide/css/core";
 
 interface ImageCarouselProps {
   images: string[];
 }
 
 const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
-  const [index, setIndex] = useState(0);
+  const splideRef = useRef<SplideType | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  if (images.length === 0) return null;
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
 
-  const prev = () => setIndex((i) => (i - 1 + images.length) % images.length);
-  const next = () => setIndex((i) => (i + 1) % images.length);
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
 
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (splideRef.current) {
+      splideRef.current?.splide?.Components?.Autoplay?.play();
+    }
+  }, [images]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isVisible) return;
+
+      switch (e.key) {
+        case "ArrowRight":
+          splideRef.current?.splide?.go(">");
+          break;
+        case "ArrowLeft":
+          splideRef.current?.splide?.go("<");
+          break;
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isVisible]);
   return (
-    <div style={{ textAlign: "center", margin: "1rem 0" }}>
-      <button onClick={prev}>◀</button>
-      <img
-        src={images[index]}
-        alt={`Slide ${index}`}
-        style={{ maxWidth: "400px", display: "block", margin: "0 auto" }}
-      />
-      <button onClick={next}>▶</button>
+    <div ref={containerRef}>
+      <Splide
+        ref={splideRef}
+        options={{
+          perPage: Math.min(3, images.length),
+          perMove: 1,
+          interval: 3000,
+          type: images.length > 3 ? "loop" : "slide",
+          autoplay: images.length > 3 ? true : "pause",
+          pauseOnFocus: false,
+          pauseOnHover: true,
+          pagination: false,
+          arrows: false,
+        }}
+      >
+        {images.map((img_path) => {
+          return (
+            <SplideSlide className="flex-center">
+              <img
+                src={`${process.env.PUBLIC_URL + img_path}`}
+                style={{
+                  width: "220px",
+                  height: "220px",
+                }}
+              ></img>
+            </SplideSlide>
+          );
+        })}
+      </Splide>
     </div>
   );
 };
