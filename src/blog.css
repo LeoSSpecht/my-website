@@ -1,80 +1,42 @@
-.blog {
-  & h1, h2, h3 {
-    font-weight: bold;
-  }
-  & h1 {
-    color: #222;
-    font-size: 2.5rem;
-  }
-  & h2 {
-    color: #333;
-    font-size: 1.5rem;
-    margin-top: 0.3rem;
-  }
-  & h3 {
-    color: #555;
-  }
-  & h4 {
-    color: #666;
-    font-size: 1rem;
-  }
-
-  & .post-content {
-    color: #555;
-    font-size: 1.13em;
-    line-height: 1.6;
-  }
-
-  & .post-content p {
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
-  }
-
-  & a:link,
-  & a:visited { 
-    color: #222; 
-    border-bottom: 1px solid #ccc; 
-    text-decoration: none;
-    transition: border-color 0.3s;
-  }
-
-  & a:link { border-bottom: 1px solid #ea4e4e; }
-
-  & a:hover { border-color: #ccc }
+.blog h1, h2, h3 {
+  font-weight: bold;
 }
-/* @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;600&display=swap');
-
-
-.blog-container {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  font-family: 'Inter', sans-serif;
+.blog h1 {
   color: #222;
-}
-
-.blog-title {
   font-size: 2.5rem;
-  font-family: 'EB Garamond', serif;
-  margin-bottom: 2rem;
-  text-align: center;
 }
-
-.blog-post h2 {
-  font-family: 'EB Garamond', serif;
-  font-size: 1.8rem;
-  margin-top: 2rem;
+.blog h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-top: 0.3rem;
 }
-
-.blog-post p, .blog-post li {
-  line-height: 1.6;
+.blog h3 {
+  color: #555;
+}
+.blog h4 {
+  color: #666;
   font-size: 1rem;
-  margin: 0.5rem 0;
 }
 
-.blog-post blockquote {
-  font-style: italic;
-  border-left: 4px solid #ccc;
-  margin: 1rem 0;
-  padding-left: 1rem;
-} */
+.blog .post-content {
+  color: #555;
+  font-size: 1.13em;
+  line-height: 1.6;
+}
+
+.blog .post-content p {
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.blog a:link,
+.blog a:visited { 
+  color: #222; 
+  border-bottom: 1px solid #ccc; 
+  text-decoration: none;
+  transition: border-color 0.3s;
+}
+
+.blog a:link { border-bottom: 1px solid #ea4e4e; }
+
+.blog a:hover { border-color: #ccc }
