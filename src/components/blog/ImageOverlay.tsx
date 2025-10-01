@@ -1,4 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  Splide,
+  SplideSlide,
+  Splide as SplideType,
+} from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 
 interface ImageOverlayProps {
   images: string[];
@@ -11,29 +17,19 @@ const ImageOverlay: React.FC<ImageOverlayProps> = ({
   initialIndex,
   onClose,
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [isTransitioning, setIsTransitioning] = useState(false);
-
-  const handleNext = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setCurrentIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const handlePrev = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
+  const splideRef = useRef<SplideType>(null);
 
   useEffect(() => {
+    document.body.style.overflow = "hidden";
+
     const handleKeyDown = (e: KeyboardEvent) => {
       switch (e.key) {
         case "ArrowRight":
-          handleNext();
+          splideRef.current?.go(">");
           break;
         case "ArrowLeft":
-          handlePrev();
+          splideRef.current?.go("<");
           break;
         case "Escape":
           onClose();
@@ -42,7 +38,10 @@ const ImageOverlay: React.FC<ImageOverlayProps> = ({
     };
 
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = "unset";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, [onClose]);
 
   const handleBackgroundClick = (e: React.MouseEvent) => {
@@ -51,37 +50,36 @@ const ImageOverlay: React.FC<ImageOverlayProps> = ({
 
   return (
     <div
-      className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center"
+      className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center overflow-hidden"
       onClick={handleBackgroundClick}
     >
       <div className="relative w-full h-full flex items-center justify-center p-4">
-        <div className="relative aspect-square max-w-[90vh] max-h-[90vh]">
-          <img
-            src={images[currentIndex]}
-            alt="enlarged view"
-            className={`w-full h-full object-cover transition-opacity duration-600 ${
-              isTransitioning ? "opacity-0" : "opacity-100"
-            }`}
-            onTransitionEnd={() => setIsTransitioning(false)}
-            onLoad={() => setIsTransitioning(false)}
-          />
-
-          {images.length > 1 && (
-            <>
-              <button
-                onClick={handlePrev}
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full"
-              >
-                ←
-              </button>
-              <button
-                onClick={handleNext}
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full"
-              >
-                →
-              </button>
-            </>
-          )}
+        <div className="relative aspect-square w-full max-w-[60vh]">
+          <Splide
+            ref={splideRef}
+            options={{
+              type: "fade",
+              rewind: true,
+              perPage: 1,
+              arrows: false,
+              pagination: false,
+              drag: true,
+              speed: 300,
+              start: initialIndex,
+            }}
+          >
+            {images.map((img, index) => (
+              <SplideSlide key={index}>
+                <div className="aspect-square w-full">
+                  <img
+                    src={img}
+                    alt="enlarged view"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </SplideSlide>
+            ))}
+          </Splide>
         </div>
       </div>
     </div>
