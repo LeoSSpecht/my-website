@@ -17,7 +17,6 @@ const ImageOverlay: React.FC<ImageOverlayProps> = ({
   initialIndex,
   onClose,
 }) => {
-  const [isTransitioning, setIsTransitioning] = useState(false);
   const splideRef = useRef<SplideType>(null);
 
   useEffect(() => {
