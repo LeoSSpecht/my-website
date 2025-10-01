@@ -21,6 +21,16 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   const splideRef = useRef<SplideType | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -65,26 +75,30 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
       <Splide
         ref={splideRef}
         options={{
-          perPage: Math.min(3, images.length),
+          perPage: isMobile
+            ? Math.min(2, images.length)
+            : Math.min(3, images.length),
           perMove: 1,
           interval: 3000,
-          type: images.length > 3 ? "loop" : "slide",
-          autoplay: images.length > 3 ? true : "pause",
+          type: images.length > (isMobile ? 2 : 3) ? "loop" : "slide",
+          autoplay: images.length > (isMobile ? 2 : 3) ? true : "pause",
           pauseOnFocus: false,
           pauseOnHover: true,
           pagination: false,
           arrows: false,
+          gap: "1rem",
         }}
       >
-        {images.map((img_path) => {
+        {images.map((img_path, index) => {
           return (
-            <SplideSlide className="flex-center">
+            <SplideSlide key={index} className="flex-center">
               <img
-                alt="sushi"
+                alt="food"
                 src={`${process.env.PUBLIC_URL + img_path}`}
                 style={{
-                  width: "220px",
-                  height: "220px",
+                  maxWidth: "100%",
+                  height: "auto",
+                  aspectRatio: 1,
                 }}
               ></img>
             </SplideSlide>

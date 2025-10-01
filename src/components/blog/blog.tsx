@@ -10,7 +10,8 @@ const Blog: React.FC = () => {
     <div
       style={{
         maxWidth: "700px",
-        margin: "0 auto",
+        marginTop: "1rem",
+        padding: "0 1.5rem",
         font: "system-ui, 'Helvetica', sans-serif",
         color: "#555",
       }}
