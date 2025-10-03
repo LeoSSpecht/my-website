@@ -32,7 +32,11 @@ const BlogPost: React.FC<BlogPostProps> = ({ folder, imageCount }) => {
   }, [folder, imageCount]);
 
   return (
-    <article style={{ marginBottom: "3rem" }} className="post-content">
+    <article
+      id={folder}
+      style={{ marginBottom: "3rem" }}
+      className="post-content"
+    >
       <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
       <ImageCarousel images={images} />
     </article>

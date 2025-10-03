@@ -23,7 +23,6 @@
   color: #555;
   font-size: clamp(1rem, 3.5vw, 1.13em);
   line-height: 1.6;
-  padding: 0 0.5rem;
 }
 
 .blog .post-content p {
@@ -34,11 +33,9 @@
 .blog a:link,
 .blog a:visited { 
   color: #222; 
-  border-bottom: 1px solid #ccc; 
   text-decoration: none;
   transition: border-color 0.3s;
+  border-bottom: 1px solid #ea4e4e;
 }
-
-.blog a:link { border-bottom: 1px solid #ea4e4e; }
 
 .blog a:hover { border-color: #ccc }

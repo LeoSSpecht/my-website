@@ -12,13 +12,24 @@ const Blog: React.FC = () => {
         maxWidth: "700px",
         margin: "0 auto",
         marginTop: "1rem",
-        padding: "0 1.5rem",
+        padding: "0 2rem",
         font: "system-ui, 'Helvetica', sans-serif",
         color: "#555",
       }}
       className="blog"
     >
       <h1 style={{ textAlign: "center" }}>My Food Blog</h1>
+      <p className="m-auto max-w-lg text-center">
+        Hey there! I am here to try what is (hopefully) the best food out there,
+        and document what I find!
+      </p>
+      <div className="m-auto text-center my-2">
+        {json.map((postData: PostContent) => (
+          <a className="text-lg" href={`#${postData.folder_name}`}>
+            {postData.title}
+          </a>
+        ))}
+      </div>
       {json.map((postData: PostContent) => (
         <BlogPost
           key={postData.folder_name}
