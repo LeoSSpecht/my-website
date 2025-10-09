@@ -30,6 +30,14 @@
   margin-top: 0.5rem;
 }
 
+.blog .post-content ul,
+.blog .post-content ol {
+  list-style: revert;
+  margin: auto 0.5rem;
+  padding: revert;
+  margin-bottom: 1rem;
+}
+
 .blog a:link,
 .blog a:visited { 
   color: #222; 
@@ -38,4 +46,6 @@
   border-bottom: 1px solid #ea4e4e;
 }
 
-.blog a:hover { border-color: #ccc }
+.blog a:hover { 
+  border-color: #ccc 
+}

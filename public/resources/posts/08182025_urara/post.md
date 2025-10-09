@@ -1,6 +1,8 @@
 # Urara
 #### Seattle - Pike Place • Aug 18th, 2025 
 #### _Rating: 9.2/10_
+#### _Price: $200 | 3 people | $66 / p_
+#### [_Menu_](https://docs.google.com/document/d/e/2PACX-1vTPxnSpBjGCwHYk7zgrOEWYbFbrGa26j6qM_XChgzlU8j0z8Z9AmidseKjn_KHR7w/pub)
 
 ## The experience
 
@@ -18,3 +20,8 @@ The sashimi samples were great to try different fishes, super fresh, flavourful 
 As a point of improvement I would suggest maybe the chef adding some good soy sauce to some of the pieces, making the omakase experience even better. Maybe some flaky salt could be good on some of them!
 
 As a bad point, the wasabi was still fake. For the price though, it was not expected to have the real one. As a recommendation, I would not get any rolls. I don’t think they would be bad, but I think the chirashi (fish over rice) brings so much more value to the experience, and for a fair price.
+
+## What I got
+- Chef's Omakase Nigiri 
+- Sashimi Omakase (8pc)
+- Individual Nigiri
