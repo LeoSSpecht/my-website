@@ -7,9 +7,14 @@ import "../../blog.css";
 interface BlogPostProps {
   folder: string;
   imageCount: number;
+  sourceImages?: string[];
 }
 
-const BlogPost: React.FC<BlogPostProps> = ({ folder, imageCount }) => {
+const BlogPost: React.FC<BlogPostProps> = ({
+  folder,
+  imageCount,
+  sourceImages,
+}) => {
   const [content, setContent] = useState("");
   const [images, setImages] = useState<string[]>([]);
 
@@ -19,12 +24,18 @@ const BlogPost: React.FC<BlogPostProps> = ({ folder, imageCount }) => {
       .then((res) => res.text())
       .then(setContent);
 
-    // For simplicity, assume images are named 1.jpg, 2.jpg, 3.jpg
-    const possible = Array.from({ length: imageCount }, (_, i) => i + 1).map(
-      (i) => `/resources/posts/${folder}/imgs/${i}.jpeg`
-    );
+    let possible: string[] = [];
 
-    console.log("Possible", possible);
+    if (!sourceImages) {
+      possible = Array.from({ length: imageCount }, (_, i) => i + 1).map(
+        (i) => `/resources/posts/${folder}/imgs/${i}.jpeg`
+      );
+    } else {
+      possible = sourceImages.map(
+        (value) => `/resources/posts/${folder}/imgs/${value}`
+      );
+    }
+
     // Check which actually exist
     Promise.all(
       possible.map((url) => fetch(url).then((res) => (res.ok ? url : null)))

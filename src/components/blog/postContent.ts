@@ -5,4 +5,5 @@ export default interface PostContent {
   date: string;
   rating: string;
   image_amount: number;
+  images?: string[];
 }

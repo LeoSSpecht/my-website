@@ -35,6 +35,7 @@ const Blog: React.FC = () => {
           key={postData.folder_name}
           folder={postData.folder_name}
           imageCount={postData.image_amount}
+          sourceImages={postData.images}
         />
       ))}
     </div>
