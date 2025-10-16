@@ -40,7 +40,7 @@ const BlogPost: React.FC<BlogPostProps> = ({
     Promise.all(
       possible.map((url) => fetch(url).then((res) => (res.ok ? url : null)))
     ).then((urls) => setImages(urls.filter((u): u is string => !!u)));
-  }, [folder, imageCount]);
+  }, [folder, imageCount, sourceImages]);
 
   return (
     <article
