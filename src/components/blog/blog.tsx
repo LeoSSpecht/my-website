@@ -24,9 +24,9 @@ const Blog: React.FC = () => {
         and document what I find!
       </p>
       <div className="m-auto text-center my-2">
-        {json.map((postData: PostContent) => (
+        {json.reverse().map((postData: PostContent) => (
           <a className="text-lg" href={`#${postData.folder_name}`}>
-            {postData.title}
+            {postData.title} <br></br>
           </a>
         ))}
       </div>

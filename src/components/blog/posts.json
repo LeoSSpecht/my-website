@@ -3,8 +3,16 @@
     "folder_name":"08182025_urara",
     "title":"Urara",
     "location": "Seattle - Pike Place",
-    "date":"08/18/2002",
+    "date":"08/18/2025",
     "rating":"9.2",
     "image_amount":2
+  },
+  {
+    "folder_name":"10082025_SushiByScratch",
+    "title":"Sushy by Scratch",
+    "location": "Seattle - 6th Ave",
+    "date":"10/08/2025",
+    "rating":"9.7",
+    "image_amount":22
   }
 ]
