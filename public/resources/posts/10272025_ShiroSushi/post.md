@@ -3,13 +3,13 @@
 #### _Rating: 9.3/10_
 #### _Price: $105 / p_
 
-This was a very worth rush decision. It was a Monday, and I had no specific plans in mind. My roomate came with the news that Seattle was having the "Seattle's restaurant week". Shiro sushi had the table service for $65. We made a reserventation and went for it.
+This was a very worth rush decision. It was a Monday, and I had no specific plans in mind. My roommate came with the news that Seattle was having the "Seattle's restaurant week". Shiro sushi had the table service for $65. We made a reservation and went for it.
 
 ## The experience and the highlights
 
-This was chef's choice, but served on the table instead of at the sushi bar. The dinner included 19 nigiri pieces, served over 5 courses (menu on the pictures). Obviously this makes se experience different – there is no personal touch or conversation with the chef, nonetheless the food was great.
+This was chef's choice, but served on the table instead of at the sushi bar. The dinner included 19 nigiri pieces, served over 5 courses (menu on the pictures). Obviously this makes the experience different – there is no personal touch or conversation with the chef, nonetheless the food was great.
 
-The courses were all though out to fit together. There was a flow to it, so no piece would overflow into the other. The first course were white fish, followed by salmon, tuna, shellfish and a closing act. Each course was eaten from right to left.
+The courses were all thought out to fit together. There was a flow to it, so no piece would overflow into the other. The first course was white fish, followed by salmon, tuna, shellfish and a closing act. Each course was eaten from right to left.
 
 We also got the sashimi platter, 15 generous sashimi pieces, worth every cent.
 
@@ -19,8 +19,8 @@ The reasoning for the 9.4 came from a combination of the rice + experience + inc
 
 The soy sauce was also a house blend, which you could definitely feel.
 
-The best pieces in my opinion where:
-1. Kurodai: A strong flavor, but super fresh. It wasn't in any sense fishy as if you where at Pike's Place. It was as if it had just been fished and cut.
+The best pieces in my opinion were:
+1. Kurodai: A strong flavor, but super fresh. It wasn't in any sense fishy as if you were at Pike's Place. It was as if it had just been fished and cut.
 2. Kampachi: Firmer in texture, but also very fresh. Blended very well with the warm rice and soy sauce.
 3. Fuji Salmon: A very lean salmon from Japan. Very exquisite and not very common. It was not as fatty as regular salmon, so it was a nice change.
-4. Akami - Lean Tuna: One of the freshest tuna I have ever had, which is something very rare. 
+4. Akami - Lean Tuna: One of the freshest tuna I have ever had, which is something very rare.
