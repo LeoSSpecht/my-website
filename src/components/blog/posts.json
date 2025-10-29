@@ -38,5 +38,13 @@
       "17.jpeg", 
       "18.jpeg"
     ]
+  },
+  {
+    "folder_name":"10272025_ShiroSushi",
+    "title":"Shiro's Sushi",
+    "location": "Seattle - Belltown",
+    "date":"10/27/2025",
+    "rating":"9.3",
+    "image_amount":7
   }
 ]

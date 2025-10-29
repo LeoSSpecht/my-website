@@ -1,6 +1,6 @@
 # Urara
 #### Seattle - Pike Place • Aug 18th, 2025 
-#### _Rating: 9.2/10_
+#### _Rating: 9.1/10_
 #### _Price: $200 | 3 people | $66 / p_
 #### [_Menu_](https://docs.google.com/document/d/e/2PACX-1vTPxnSpBjGCwHYk7zgrOEWYbFbrGa26j6qM_XChgzlU8j0z8Z9AmidseKjn_KHR7w/pub)
 
