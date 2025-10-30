@@ -15,7 +15,7 @@ We also got the sashimi platter, 15 generous sashimi pieces, worth every cent.
 
 The fish was absolutely fresh, increasing the quality of everything; it is impressive how important the raw ingredient is for the final result. All the textures were perfect. You could feel the sweetness, boldness or presence of it all. The tuna was very balanced, not too strong, but present. The rice was good, perfect texture, but lacking in flavor. It also varied in temperature, some pieces came with warm rice, which I think blends better with the fish, some pieces came with cold rice, making the experience a bit inconsistent. 
 
-The reasoning for the 9.4 came from a combination of the rice + experience + inconsistencies. Even though, it is the best bang for your buck in Seattle from the ones I have tried.
+The reasoning for the 9.3 came from a combination of the rice + experience + inconsistencies. Even though, it is the best bang for your buck in Seattle from the ones I have tried.
 
 The soy sauce was also a house blend, which you could definitely feel.
 
