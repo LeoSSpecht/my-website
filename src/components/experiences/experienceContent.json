@@ -1,5 +1,13 @@
 [
   {
+    "customLogo": "stripe",
+    "itemHeader": "Jul 2025 - Present",
+    "itemTitle": "Stripe",
+    "itemSubtitle": "Software Engineer",
+    "itemContent": ["Making payments available everywhere with Local Payment Methods."],
+    "redirectLink": "https://stripe.com"
+  },
+  {
     "imagePath": "../resources/assets/logoStone.png",
     "itemHeader": "Fall 2024 - Spring 2025",
     "itemTitle": "Stone Co",
