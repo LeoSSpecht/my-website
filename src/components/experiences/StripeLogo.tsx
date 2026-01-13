@@ -110,8 +110,9 @@ const StripeLogo: React.FC<StripeLogoProps> = ({
     scene.background = new THREE.Color(backgroundColor);
 
     // Camera setup
-    const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
-    camera.position.z = 4;
+    // Reduced FOV and increased distance to flatten perspective and prevent edges from clipping
+    const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 1000);
+    camera.position.z = 6;
 
     // Renderer setup
     const renderer = new THREE.WebGLRenderer({
