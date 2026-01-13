@@ -5,7 +5,6 @@ import { AboutMe } from "../../components/aboutMe";
 import { Experiences } from "../../components/experiences/experiences";
 import { Skills } from "../../components/skills";
 import Projects from "../../components/projects/projects";
-import StripeLogo from "../../components/experiences/StripeLogo";
 
 export const MainPage = () => {
   return (
