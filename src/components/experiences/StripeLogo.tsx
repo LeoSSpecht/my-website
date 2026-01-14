@@ -25,7 +25,7 @@ const StripeLogo: React.FC<StripeLogoProps> = ({
   backgroundColor = "#635BFF",
   logoColor = "#FFFFFF",
   size = 46,
-  rotationSensitivity = 0.15,
+  rotationSensitivity = 0.4,
   metalness = 0.1,
   roughness = 1,
   redirectLink = "https://stripe.com",
@@ -45,15 +45,26 @@ const StripeLogo: React.FC<StripeLogoProps> = ({
   const rainbowHue = useRef(0);
 
   // Mouse interaction state
-  const initialRotation = 0;
   const isDragging = useRef(false);
   const initialClickPos = useRef({ x: 0, y: 0 });
   const lastMousePos = useRef({ x: 0, y: 0 });
-  const targetRotation = useRef({ x: initialRotation, y: initialRotation }); // Initial tilt to show 3D
-  const currentRotation = useRef({ x: initialRotation, y: initialRotation }); // Match initial tilt
+
+  const initialRotation = 0;
+  // Use Quaternions for robust 3D rotation without gimbal lock
+  const targetQuaternion = useRef(
+    new THREE.Quaternion().setFromEuler(
+      new THREE.Euler(initialRotation, initialRotation, 0)
+    )
+  );
+  const currentQuaternion = useRef(
+    new THREE.Quaternion().setFromEuler(
+      new THREE.Euler(initialRotation, initialRotation, 0)
+    )
+  );
+
   const rotationAxis = useRef(new THREE.Vector3(0, 1, 0));
   const isIdleRotating = useRef(true); // Track if idle rotation is active
-  const idleRotationSpeed = 0.008; // Speed of idle Y-axis rotation
+  const idleRotationSpeed = 0.005; // Speed of idle rotation
 
   // Create parallelogram geometry (Stripe logo shape extruded into 3D)
   const createRhombusGeometry = useCallback(() => {
@@ -185,7 +196,11 @@ const StripeLogo: React.FC<StripeLogoProps> = ({
 
       // Apply idle rotation on Y axis when not dragging
       if (isIdleRotating.current) {
-        targetRotation.current.y += idleRotationSpeed;
+        const idleRotation = new THREE.Quaternion().setFromAxisAngle(
+          new THREE.Vector3(0, 1, 0),
+          idleRotationSpeed
+        );
+        targetQuaternion.current.premultiply(idleRotation);
       }
 
       // Rainbow mode: cycle through hues
@@ -202,15 +217,10 @@ const StripeLogo: React.FC<StripeLogoProps> = ({
       }
 
       // Smooth interpolation for rotation (easing)
-      const easingFactor = 0.08;
-      currentRotation.current.x +=
-        (targetRotation.current.x - currentRotation.current.x) * easingFactor;
-      currentRotation.current.y +=
-        (targetRotation.current.y - currentRotation.current.y) * easingFactor;
+      currentQuaternion.current.slerp(targetQuaternion.current, 0.08);
 
-      // Apply rotation around the calculated axis
-      rhombus.rotation.x = currentRotation.current.x;
-      rhombus.rotation.y = currentRotation.current.y;
+      // Apply rotation
+      rhombus.quaternion.copy(currentQuaternion.current);
 
       renderer.render(scene, camera);
       sceneRef.current.animationId = requestAnimationFrame(animate);
@@ -339,8 +349,11 @@ const StripeLogo: React.FC<StripeLogoProps> = ({
       const rotationAmount = projectedMovement * rotationSensitivity * 0.02;
 
       // Apply rotation based on the calculated axis
-      targetRotation.current.x += rotationAxis.current.x * rotationAmount * 2;
-      targetRotation.current.y += rotationAxis.current.y * rotationAmount * 2;
+      const rotationDelta = new THREE.Quaternion().setFromAxisAngle(
+        rotationAxis.current,
+        rotationAmount
+      );
+      targetQuaternion.current.premultiply(rotationDelta); // Use premultiply for world-space rotation dragging
     },
     [rotationSensitivity]
   );
