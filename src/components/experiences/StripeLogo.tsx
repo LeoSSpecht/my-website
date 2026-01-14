@@ -23,7 +23,7 @@ interface StripeLogoProps {
 // Try to add shadow on the background
 const StripeLogo: React.FC<StripeLogoProps> = ({
   backgroundColor = "#635BFF",
-  logoColor = "#FFFFFF",
+  logoColor = "#eeeeee",
   size = 46,
   rotationSensitivity = 0.5,
   metalness = 0.1,
@@ -75,8 +75,8 @@ const StripeLogo: React.FC<StripeLogoProps> = ({
     // Define the parallelogram vertices (centered at origin)
     // Skew amount determines how much the top/bottom edges slant (vertical offset)
     const width = 1.5;
-    const height = 1.2;
-    const skew = 0.35; // Vertical offset for the skew
+    const height = 1.3;
+    const skew = 0.4; // Vertical offset for the skew
 
     // Start from bottom-left, go clockwise
     // The left edge goes from bottom-left to top-left (vertical)
@@ -132,7 +132,7 @@ const StripeLogo: React.FC<StripeLogoProps> = ({
     renderer.setSize(renderSize, renderSize);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1.4; // Lower exposure darkens shadows more
+    renderer.toneMappingExposure = 1.0; // Lower exposure darkens shadows more
 
     // Adjust output color space for better contrast
     renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -148,21 +148,21 @@ const StripeLogo: React.FC<StripeLogoProps> = ({
     scene.add(ambientLight);
 
     // Main light from front - illuminates the front face
-    const frontLight = new THREE.DirectionalLight(0xffffff, 1.5);
+    const frontLight = new THREE.DirectionalLight(0xffffff, 2);
     frontLight.position.set(0, 0, 5);
     scene.add(frontLight);
 
     // Side lights create edge shadows by not reaching the sides directly
-    const topRightLight = new THREE.DirectionalLight(0xffffff, 0.4);
+    const topRightLight = new THREE.DirectionalLight(0xffffff, 0.8);
     topRightLight.position.set(3, 3, 2);
     scene.add(topRightLight);
 
-    const bottomLeftLight = new THREE.DirectionalLight(0xffffff, 0.2);
+    const bottomLeftLight = new THREE.DirectionalLight(0xffffff, 0.4);
     bottomLeftLight.position.set(-3, -3, 2);
     scene.add(bottomLeftLight);
 
     // Right side light - creates shadow on the left when rotating
-    const rightLight = new THREE.DirectionalLight(0xffffff, 0.6);
+    const rightLight = new THREE.DirectionalLight(0xffffff, 0.8);
     rightLight.position.set(5, 0, 1);
     scene.add(rightLight);
 
@@ -173,7 +173,7 @@ const StripeLogo: React.FC<StripeLogoProps> = ({
       metalness: metalness,
       roughness: roughness,
       emissive: 0xffffff,
-      emissiveIntensity: 0.1, // Lower emissive to allow lighting to create shadows
+      emissiveIntensity: 0.05, // Lower emissive to allow lighting to create shadows
       envMapIntensity: 1,
     });
 
