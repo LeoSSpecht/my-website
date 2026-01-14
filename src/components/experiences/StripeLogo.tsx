@@ -18,11 +18,9 @@ interface StripeLogoProps {
   redirectLink?: string;
 }
 
-/**
- * A 3D interactive Stripe logo component using Three.js.
- * Displays a white shiny rhombus that rotates based on mouse drag interaction.
- * Easter egg: Type "4242" to toggle rainbow mode!
- */
+// Ajust the grab rotation axis
+// Try to change color to a darker color and then add neon
+// Try to add shadow on the background
 const StripeLogo: React.FC<StripeLogoProps> = ({
   backgroundColor = "#635BFF",
   logoColor = "#FFFFFF",
@@ -352,6 +350,10 @@ const StripeLogo: React.FC<StripeLogoProps> = ({
     isIdleRotating.current = true; // Resume idle rotation when user releases
   }, []);
 
+  const handleDoubleClick = useCallback(() => {
+    setIsRainbowMode((prev) => !prev);
+  }, []);
+
   // Add global mouse event listeners when dragging starts
   useEffect(() => {
     window.addEventListener("mousemove", handleMouseMove);
@@ -379,6 +381,7 @@ const StripeLogo: React.FC<StripeLogoProps> = ({
       }}
       className="stripe-logo-container"
       onMouseDown={handleMouseDown}
+      onDoubleClick={handleDoubleClick}
       role="button"
       tabIndex={0}
       aria-label="Stripe Logo - Interactive 3D"
