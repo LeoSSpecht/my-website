@@ -25,7 +25,7 @@ const StripeLogo: React.FC<StripeLogoProps> = ({
   backgroundColor = "#635BFF",
   logoColor = "#FFFFFF",
   size = 46,
-  rotationSensitivity = 0.4,
+  rotationSensitivity = 0.5,
   metalness = 0.1,
   roughness = 1,
   redirectLink = "https://stripe.com",
@@ -330,30 +330,28 @@ const StripeLogo: React.FC<StripeLogoProps> = ({
 
       lastMousePos.current = { x: e.clientX, y: e.clientY };
 
-      // Project mouse movement onto the direction perpendicular to the rotation axis
-      // The rotation axis is perpendicular to the click position vector
-      // So movement should be projected onto the click position direction
-      const clickX = initialClickPos.current.x;
-      const clickY = initialClickPos.current.y;
+      // Calculate rotation axis dynamically based on mouse movement direction
+      // The axis is perpendicular to the movement direction
+      // Moving right (deltaX > 0) -> rotate around Y axis
+      // Moving down (deltaY > 0) -> rotate around X axis
+      const axisX = deltaY; // Perpendicular to movement
+      const axisY = deltaX;
 
-      // Normalize click position
-      const clickLength = Math.sqrt(clickX * clickX + clickY * clickY);
-      const normClickX = clickLength > 0.1 ? clickX / clickLength : 0;
-      const normClickY = clickLength > 0.1 ? clickY / clickLength : 1;
+      // Normalize the axis (skip tiny movements)
+      const length = Math.sqrt(axisX * axisX + axisY * axisY);
+      if (length < 0.5) return; // Ignore very small movements
 
-      // Project mouse delta onto the click direction
-      // This gives us movement "along" the click vector, which rotates around the perpendicular axis
-      const projectedMovement = deltaX * normClickX + deltaY * normClickY;
+      rotationAxis.current.set(axisX / length, axisY / length, 0);
 
-      // Calculate rotation amount based on projected movement
-      const rotationAmount = projectedMovement * rotationSensitivity * 0.02;
+      // Calculate rotation amount based on movement magnitude
+      const rotationAmount = length * rotationSensitivity * 0.02;
 
       // Apply rotation based on the calculated axis
       const rotationDelta = new THREE.Quaternion().setFromAxisAngle(
         rotationAxis.current,
         rotationAmount
       );
-      targetQuaternion.current.premultiply(rotationDelta); // Use premultiply for world-space rotation dragging
+      targetQuaternion.current.premultiply(rotationDelta);
     },
     [rotationSensitivity]
   );
