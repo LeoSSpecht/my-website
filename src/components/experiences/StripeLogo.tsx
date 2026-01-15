@@ -18,9 +18,6 @@ interface StripeLogoProps {
   redirectLink?: string;
 }
 
-// Ajust the grab rotation axis
-// Try to change color to a darker color and then add neon
-// Try to add shadow on the background
 const StripeLogo: React.FC<StripeLogoProps> = ({
   backgroundColor = "#635BFF",
   logoColor = "#eeeeee",
